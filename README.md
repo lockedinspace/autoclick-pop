@@ -1,5 +1,11 @@
 # Autoclicker POP 
 
-### Installation:
+### Requirements:
+
+```
+Golang
+
+GCC
+```
 
 

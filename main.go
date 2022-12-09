@@ -5,27 +5,31 @@ import (
 	"github.com/go-vgo/robotgo" 
 	"github.com/robotn/gohook"  
 	"time"
+	"os"
 )
 
 func main() {
 	fmt.Printf(`
-POP Autoclicker
+	POP! Autoclicker
             __
 (\,--------'()'--o
  (_    ___    /~"
   (_)_)  (_)_)
 
-
   `)
+  	fmt.Println("Miliseconds between clicks: ")
+	var miliseconds time.Duration
+	fmt.Scanln(&miliseconds)
 	s := hook.Start()          
-	defer hook.End()           
+	defer hook.End()      
+	fmt.Println(miliseconds)   
 	autoClickerActive := false 
 	go func() {                
 		for {
 			if autoClickerActive {
 				robotgo.MouseClick("left", false) 
 			}
-			time.Sleep(time.Millisecond * 5) 
+			time.Sleep(time.Millisecond * miliseconds) 
 		}
 	}()
 	fmt.Println("Press F6 to Enable/Disable the Auto Clicker")
