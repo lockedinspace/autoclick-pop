@@ -9,7 +9,7 @@ import (
 
 func main() {
 	fmt.Printf(`
-	POP! Autoclicker (v0.1.0)
+	POP! Autoclicker (v0.1.1)
             __
 (\,--------'()'--o
  (_    ___    /~"
