@@ -5,7 +5,6 @@ import (
 	"github.com/go-vgo/robotgo" 
 	"github.com/robotn/gohook"  
 	"time"
-	"os"
 )
 
 func main() {
