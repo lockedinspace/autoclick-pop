@@ -17,12 +17,12 @@ POP! Autoclicker (v0.1.2)
 
   `)
 
-  	fmt.Println("Miliseconds between clicks: ")
+  	/* fmt.Println("Miliseconds between clicks: ")
 	var miliseconds time.Duration
 	var doubleClick bool
 	fmt.Scanln(&miliseconds)
 	fmt.Println("Double click true/false: ")
-	fmt.Scanln(&doubleClick)
+	fmt.Scanln(&doubleClick) */
 	s := hook.Start()          
 	defer hook.End()      
 	autoClickerActive := false 
@@ -31,7 +31,7 @@ POP! Autoclicker (v0.1.2)
 			if autoClickerActive {
 				robotgo.MouseClick("left", doubleClick) 
 			}
-			time.Sleep(time.Millisecond * miliseconds) 
+			//time.Sleep(time.Millisecond * miliseconds) 
 		}
 	}()
 	fmt.Println("Press F6 to Enable/Disable ")
