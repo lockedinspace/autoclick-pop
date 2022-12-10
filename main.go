@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/go-vgo/robotgo" 
 	"github.com/robotn/gohook"  
-	"time"
+	//"time"
 )
 
 func main() {
@@ -14,8 +14,7 @@ POP! Autoclicker (v0.1.3)
 (\,--------'()'--o
  (_    ___    /~"
   (_)_)  (_)_)
-
-  `)
+`)
 
   	/* fmt.Println("Miliseconds between clicks: ")
 	var miliseconds time.Duration
@@ -29,7 +28,7 @@ POP! Autoclicker (v0.1.3)
 	go func() {                
 		for {
 			if autoClickerActive {
-				robotgo.MouseClick("left", doubleClick) 
+				robotgo.MouseClick("left", false) 
 			}
 			//time.Sleep(time.Millisecond * miliseconds) 
 		}
