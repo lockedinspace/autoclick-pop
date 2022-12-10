@@ -21,7 +21,7 @@ var rootCmd = &cobra.Command{
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Printf(`
-POP! Autoclicker (v0.1.7)
+POP! Autoclicker (v0.1.8)
             __
 (\,--------'()'--o
  (_    ___    /~"
