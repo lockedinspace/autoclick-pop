@@ -36,7 +36,6 @@ POP! Autoclicker (v0.1.7)
 		if pointerFlag {
 			x, y = robotgo.GetMousePos()
 			fmt.Println("pos:", x, y)
-			os.Exit(9)
 		}
 		s := hook.Start()
 		defer hook.End()
