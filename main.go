@@ -9,7 +9,7 @@ import (
 
 func main() {
 	fmt.Printf(`
-POP! Autoclicker (v0.1.5)
+POP! Autoclicker (v0.1.6)
             __
 (\,--------'()'--o
  (_    ___    /~"
@@ -18,7 +18,6 @@ POP! Autoclicker (v0.1.5)
 
   	fmt.Println("Miliseconds between clicks: ")
 	var miliseconds time.Duration
-	var doubleClick bool
 	fmt.Scanln(&miliseconds)
 	s := hook.Start()          
 	defer hook.End()      
