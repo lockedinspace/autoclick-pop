@@ -9,19 +9,17 @@ import (
 
 func main() {
 	fmt.Printf(`
-POP! Autoclicker (v0.1.3)
+POP! Autoclicker (v0.1.5)
             __
 (\,--------'()'--o
  (_    ___    /~"
   (_)_)  (_)_)
 `)
 
-  	/* fmt.Println("Miliseconds between clicks: ")
+  	fmt.Println("Miliseconds between clicks: ")
 	var miliseconds time.Duration
 	var doubleClick bool
 	fmt.Scanln(&miliseconds)
-	fmt.Println("Double click true/false: ")
-	fmt.Scanln(&doubleClick) */
 	s := hook.Start()          
 	defer hook.End()      
 	autoClickerActive := false 
@@ -30,7 +28,7 @@ POP! Autoclicker (v0.1.3)
 			if autoClickerActive {
 				robotgo.MouseClick("left", false) 
 			}
-			//time.Sleep(time.Millisecond * miliseconds) 
+		    time.Sleep(time.Millisecond * miliseconds) 
 		}
 	}()
 	go func() {                
@@ -38,7 +36,7 @@ POP! Autoclicker (v0.1.3)
 			if autoClickerActive {
 				robotgo.MouseClick("left", false) 
 			}
-			//time.Sleep(time.Millisecond * miliseconds) 
+			time.Sleep(time.Millisecond * miliseconds)  
 		}
 	}()
 	fmt.Println("Press F6 to Enable/Disable ")
