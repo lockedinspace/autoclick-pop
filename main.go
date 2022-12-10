@@ -33,6 +33,14 @@ POP! Autoclicker (v0.1.3)
 			//time.Sleep(time.Millisecond * miliseconds) 
 		}
 	}()
+	go func() {                
+		for {
+			if autoClickerActive {
+				robotgo.MouseClick("left", false) 
+			}
+			//time.Sleep(time.Millisecond * miliseconds) 
+		}
+	}()
 	fmt.Println("Press F6 to Enable/Disable ")
 	for { 
 		select {
